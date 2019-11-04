@@ -1,0 +1,19 @@
+
+@import "abstracts/_variables.scss";
+@import "abstracts/_utilities.scss";
+
+@import "base/_base.scss";
+
+@import "components/_navigation.scss";
+@import "components/_header.scss";
+@import "components/_footer.scss";
+@import "components/_button.scss";
+@import "components/_composition.scss";
+
+@import "layout/_layout.scss";
+
+@import "pages/_index.scss";
+@import "pages/_rules.scss";
+@import "pages/_game-info.scss";
+@import "pages/_registration.scss";
+

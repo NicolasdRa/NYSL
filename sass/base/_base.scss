@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    /* this defines what 1rem is */
+    font-size: 62.5%;
+    /* 62.5% = 10px */
+
+}
+
+img {
+    max-height: 100%;
+    max-width: 100%;
+    opacity: 1;
+}

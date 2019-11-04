@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="/css/icofont.css">
+    <link rel="stylesheet" href="/css/icon-font.css">
+    <link rel="stylesheet" href="/css/all.css">
+
+    <link rel="stylesheet" href="sass/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap" rel="stylesheet">
+
+
+    <title>NYSL - Registration Form</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <section class="registration" id="registration">
+
+            <h2 class="registration__title"><strong>Sign up to</strong>NYSL</h2>
+
+            <h3 class="registration__subtitle">Registration Form</h3>
+
+            <form action="show_data.html" method="get" class="registration__form">
+                <label for="fn">Player’s First Name:</label>
+                <input type="text" name="firstname" id="fn" class="registration__form-input">
+
+                <label for="ln">Last Name:</label>
+                <input type="text" name="lastname" id="ln" class="registration__form-input">
+                <br><br>
+
+                <label for="sa">Street address:</label>
+                <input type="text" name="streetaddress" id="sa" class="registration__form-input">
+                <br><br>
+
+                <label for="city">City:</label>
+                <input type="text" name="city" id="city" class="registration__form-input">
+
+                <label for="zip">Zip:</label>
+                <input type="text" name="zip" id="zip" class="registration__form-input">
+                <br><br>
+
+                <label for="dof">Date of Birth (mm/dd/yyyy):</label>
+                <input type="date" name="dof" id="dof" class="registration__form-input">
+                <br><br>
+
+                <p>Gender</p>
+                <input type="radio" name="gender" id="male" value="male" />
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="female" value="female" />
+                <label for="female">Female</label>
+                <br><br>
+
+                <label for="grade">Grade:</label>
+                <select name="grade" id="grade" class="registration__form-ddown">
+                    <option value="pre-school">Pre-School
+                    <option value="1st">1st
+                    <option value="2nd">2nd
+                    <option value="3rd">3rd
+                    <option value="4th">4th
+                    <option value="5th">5th
+                </select>
+                <br><br>
+
+                <label for="parent">Parent / Guardian:</label>
+                <input type="text" name="parent" id="parent" class="registration__form-input">
+                <br><br>
+
+                <label for="pn">Phone number:</label>
+                <input type="number" name="pn" id="pn" class="registration__form-input">
+
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email" required class="registration__form-input">
+                <br><br>
+
+                <p>Which elementary schools do you live near?
+                </p>
+
+                <label for="fcschool">First closest school</label>
+                <select name="fcschool" id="fcschool" class="registration__form-ddown">
+                    <option value="AJ Katzenmaier" selected>AJ Katzenmaier
+                    <option value="Greenbay">Greenbay
+                    <option value="Howard A Yeager">Howard A Yeager
+                    <option value="Marjorie P Hart">Marjorie P Hart
+                    <option value="North Elementary">North Elementary
+                    <option value="South Elementary">South Elementary
+                </select>
+
+                <label for="scschool">Second closest school</label>
+                <select name="scschool" id="scschool" class="registration__form-ddown">
+                    <option value="AJ Katzenmaier" selected>AJ Katzenmaier
+                    <option value="Greenbay">Greenbay
+                    <option value="Howard A Yeager">Howard A Yeager
+                    <option value="Marjorie P Hart">Marjorie P Hart
+                    <option value="North Elementary">North Elementary
+                    <option value="South Elementary">South Elementary
+                </select>
+                <br><br>
+
+                <p>What position(s) do you normally play? (check all that apply)</p>
+
+                <input type="checkbox" name="positions" value="Forward">Forward
+                <input type="checkbox" name="positions" value="Defense">Defense
+                <input type="checkbox" name="positions" value="Midfield">Midfield
+                <input type="checkbox" name="positions" value="Goalkeeper">Goalkeeper
+                <br><br>
+
+                <p>Already have a uniform?</p>
+                <input type="radio" name="uniform" value="yes" class="registration__form-radiobtn">Yes
+                <input type="radio" name="uniform" value="no" class="registration__form-radiobtn">No
+                <br><br>
+
+                <label for="jsize">Jersey Size</label>
+                <select name="jsize" id="jsize" class="registration__form-ddown">
+                    <option value="Youth Small" selected>Youth Small</option>
+                    <option value="Youth Medium">Youth Medium</option>
+                    <option value="Youth Large">Youth Large</option>
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                    <option value="Extra-Large">Extra-Large</option>
+                </select>
+
+                <label for="ssize">Short Size</label>
+                <select name="ssize" id="ssize" class="registration__form-ddown">
+                    <option value="Youth Small" selected>Youth Small</option>
+                    <option value="Youth Medium">Youth Medium</option>
+                    <option value="Youth Large">Youth Large</option>
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                    <option value="Extra-Large">Extra-Large</option>
+                </select>
+                <br><br>
+
+                <h4 class="registration__form-text_title">Permission to Play</h4>
+                <p>I, the parent or guardian of the minor registrant, agree that the registrant and
+                    I will abide by
+                    all the rules of the Northside Youth
+                    Soccer League (NYSL). In recognizing the possibility of physical injury
+                    associated with soccer
+                    and in consideration for the “League”
+                    accepting the registrant for its soccer programs and activities, I hereby
+                    release, discharge,
+                    and/or otherwise indemnify NYSL, their
+                    employees and associated personnel and volunteers, including the facilities used
+                    for practices
+                    and games, against any claim by or
+                    on behalf of the registrant as a result of the registrant’s participation in the
+                    program and/or
+                    being transported to or from NYSL
+                    sponsored activities, which transportation.
+                    By signing below, I hereby agree and authorize the above. In addition, by
+                    signing below, I also
+                    acknowledge that I have read the
+                    cancellation policy and agree to its terms.</p>
+
+
+                <label for="parent">Parent/Guardian Signature/full name:</label>
+                <input type="text" name="parent" class="registration__form-input">
+
+                <label for="date">Date (mm/dd/yyyy):</label>
+                <input type="date" name="date" id="date" class="registration__form-input">
+                <br><br>
+
+                <button type="submit" value="Submit"
+                    class="btn btn-nysl--grey btn--animated registration__form-btn">Submit</button>
+            </form>
+
+        </section>
+
+        <Footer class="footer">
+            <div class="footer__content">
+                <div class="footer__navigation">
+                    <ul class="footer__navigation-list">
+                        <li class="footer__navigation-list--item"><a href="index.html"
+                                class="footer__navigation-list--link">home</a></li>
+                        <li class="footer__navigation-list--item"><a href="index.html#section-events"
+                                class="footer__navigation-list--link">events</a></li>
+                        <li class="footer__navigation-list--item"><a href="index.html#section-about"
+                                class="footer__navigation-list--link">about</a></li>
+                        <li class="footer__navigation-list--item"><a href="index.html#section-contact"
+                                class="footer__navigation-list--link">contact</a></li>
+                        <li class="footer__navigation-list--item"><a href="registration.html"
+                                class="footer__navigation-list--link">sign-up</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__logo-copy">
+                    <div class="footer__logo-copy--logo-container">
+                        <img src="/resources/sprint1/nysl_logo.png" alt="NYSL logo"
+                            class="footer__logo-copy--logo-container---logo">
+                        <h4 class="footer__logo-copy--logo-container---acronym">NYSL</h4>
+                    </div>
+                    <div class="footer__logo-copy--copyright">
+                        <p>Built by <a href="index.html" class="footer__logo-copy--copyright__link">Nicolás di Rago</a>.
+                            Copyright &copy; by Nicolás di Rago, 2019.</p>
+                    </div>
+                </div>
+
+                <div class="footer__social">
+                    <ul class="footer__social-list">
+                        <li class="footer__social-list--item"><a href="index.html" class="footer__social-list--link"><i
+                                    class="icofont-facebook"></i></a></li>
+                        <li class="footer__social-list--item"><a href="index.html" class="footer__social-list--link"><i
+                                    class="icofont-instagram"></i></a></li>
+                        <li class="footer__social-list--item"><a href="index.html" class="footer__social-list--link"><i
+                                    class="icofont-brand-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </Footer>
+
+    </div>
+
+</body>
+
+</html>
