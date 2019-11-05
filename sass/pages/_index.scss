@@ -149,7 +149,7 @@
         display: flex;
         align-self: flex-start;
         justify-content: flex-end;
-        margin: 5rem 0 0 10rem;
+        margin: 5rem 0 0 15rem;
         width: 10%;
 
         color: rgba($color-grey-light-1, .5);
@@ -191,7 +191,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 4rem 10rem;
+        padding: 4rem 10rem 3rem 10rem;
 
         &-container {
             display: flex;
@@ -200,7 +200,6 @@
             padding: 3rem 3rem;
             background-color: $color-grey-dark;
             border-radius: 15px;
-
         }
 
         &-text {
@@ -226,11 +225,12 @@
 
     &__btn-text {
         display: flex;
+        align-self: flex-start;
         justify-content: flex-end;
-        margin-top: 5rem;
-        width: 50%;
+        margin: 0 0 0 15rem;
+        width: 10%;
 
-        color: rgba($color-grey-light-1, .5);
+        color: rgba($color-grey-dark-2, .8);
         font-weight: 100;
         font-size: 3rem;
     }
@@ -311,23 +311,25 @@
             background-color: rgba($color-primary, .8);
             border-radius: 15px;
             margin: 1rem 10rem 1rem 2rem;
-            padding: 2rem 4rem;
+            padding: 2.5rem 4rem;
             width: 40%;
 
-            &--text {
+            &--subtitle {
                 display: flex;
-                justify-self: flex-start;
+                justify-self: center;
                 align-self: flex-start;
-
-                padding: .5rem 2rem;
-                border-radius: 3px;
-                margin-top: .5rem;
-                margin-left: 8rem;
-                margin-bottom: 4rem;
-                color: rgba($color-grey-light-1, 1);
-                font-weight: 300;
+                color: $color-grey-light-1;
                 font-size: 2rem;
+                font-weight: 300;
 
+                margin: 1rem 0 3rem 8rem;
+                width: auto;
+            }
+
+            &--text {
+                margin-left: 7rem;
+                margin-bottom: 1rem;
+                color: rgba($color-grey-dark-1, 1);
             }
 
             &--map {
@@ -335,6 +337,7 @@
                 align-self: center;
                 border-radius: 5px;
                 background-color: rgba($color-primary, .5);
+                opacity: .7;
                 transition: all .2s;
 
                 &:hover {

@@ -13,6 +13,8 @@ body {
   background-color: $color-grey-dark;
   box-shadow: 0px 2rem 2rem $color-grey-dark-1;
   border-radius: 3px;
+  display:flex;
+  flex-direction: column;
 }
 
 
