@@ -1,6 +1,27 @@
 /* SECTION EVENTS */
 
 .section-events {
+    @include respond(tab-land) {
+        height: 100vh;
+        padding: 10rem 2rem 5rem 2rem;
+        width: 100vw;
+        overflow: hidden;
+    }
+
+    @include respond(tab-port) {
+        height: 100vh;
+        padding: 11rem 2rem 15rem 2rem;
+        width: 100vw;
+        overflow: hidden;
+    }
+
+    @include respond(phone) {
+        height: 100vh;
+        padding: 6rem, 2rem;
+        width: 100vw;
+        overflow: hidden;
+    }
+
     height: 70rem;
     padding: 9rem 0;
     background-color: rgba($color-grey-dark, .6);
@@ -8,10 +29,41 @@
     border-radius: 3px;
 
     &__container {
+        @include respond(tab-land) {
+            height: 100%;
+        }
+
+        @include respond(tab-port) {
+            height: 100%;
+            margin-top: 5rem;
+        }
+
+        @include respond(phone) {
+            height: 78vh;
+            margin-top: 2rem;
+        }
+
         display: flex;
         width: 100%;
 
         &-left {
+            @include respond(tab-land) {
+                margin-left: 3rem;
+                width: 38%;
+                padding: 3rem 0 0 1rem;
+            }
+
+            @include respond(tab-port) {
+                margin-left: 2rem;
+                width: 38%;
+                padding: 3rem 0 0 1rem;
+            }
+
+            @include respond(phone) {
+                margin-left: 1rem;
+                width: 33%;
+            }
+
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -29,6 +81,23 @@
             color: rgba($color-primary, .8);
 
             &--subtitle {
+
+                @include respond(tab-land) {
+                    margin-bottom: 1rem;
+                    font-size: 3rem;
+                    font-weight: 300;
+                }
+
+                @include respond(tab-port) {
+                    margin-bottom: 1rem;
+                    font-size: 3rem;
+                    font-weight: 300;
+                }
+
+                @include respond(phone) {
+                    margin-bottom: 1rem;
+                }
+
                 display: flex;
                 justify-self: center;
                 align-self: center;
@@ -42,12 +111,42 @@
             }
 
             &--gallery {
+                @include respond(tab-land) {
+                    margin-top: 3rem;
+                    margin-left: 1.5rem;
+                }
+
+                @include respond(tab-port) {
+                    margin-top: 2rem;
+                    margin-left: 0;
+                }
+
+                @include respond(phone) {
+                    margin-top: 2rem;
+                    margin-left: 0;
+                }
+
                 display: flex;
                 justify-content: center;
                 flex-wrap: wrap;
                 width: 100%;
 
                 &__photo {
+                    @include respond(tab-land) {
+                        max-width: 46%;
+                        margin-top: .5rem;
+                    }
+
+                    @include respond(tab-port) {
+                        max-width: 52%;
+                        margin-top: 1rem;
+                    }
+
+                    @include respond(phone) {
+                        max-width: 78%;
+                        margin-top: 1rem;
+                    }
+
                     box-shadow: 0 1.5rem 4rem rgba($color-black, .5);
                     border-radius: 4px;
                     transition: .2s;
@@ -64,6 +163,18 @@
         }
 
         &-center {
+            @include respond(tab-land) {
+                width: 24%;
+            }
+
+            @include respond(tab-port) {
+                width: 24%;
+            }
+
+            @include respond(phone) {
+                width: 30%;
+            }
+
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -72,10 +183,28 @@
             color: rgba($color-primary, .8);
 
             &--title {
+                @include respond(tab-land) {
+                    margin-top: -7.5rem;
+                    margin-bottom: 4rem;
+                    font-size: 3.5rem;
+                    font-weight: 300;
+                }
+
+                @include respond(tab-port) {
+                    margin-top: -9.5rem;
+                    margin-bottom: 4rem;
+                    font-size: 3.5rem;
+                    font-weight: 300;
+                }
+
+                @include respond(phone) {
+                    margin-top: -7.5rem;
+                    margin-bottom: 2rem;
+                }
+
                 display: flex;
                 justify-self: center;
                 align-self: center;
-
                 margin-top: -2rem;
                 width: auto;
                 color: rgba($color-primary, .6);
@@ -84,18 +213,49 @@
             }
 
             &--button {
+                @include respond(tab-land) {
+                    margin-bottom: -2.5rem;
+                    font-weight: 800;
+                }
+
+                @include respond(tab-port) {
+                    margin-bottom: -2.5rem;
+                    font-weight: 900;
+                }
+
+                @include respond(phone) {
+                    margin-bottom: -3.5rem;
+                    font-weight: 900;
+                }
+
                 display: flex;
                 justify-self: center;
                 align-self: center;
-
                 margin-bottom: -2rem;
-
                 height: 5rem;
                 width: auto;
             }
         }
 
         &-right {
+            @include respond(tab-land) {
+                margin-right: 2rem;
+                padding: 3rem 1rem 2rem 0;
+                width: 38%;
+            }
+
+            @include respond(tab-port) {
+                margin-right: 2rem;
+                padding: 3rem 1rem 2rem 0;
+                width: 38%;
+            }
+
+            @include respond(phone) {
+                margin-right: 1rem;
+                width: 33%;
+                padding-right: 6rem;
+            }
+
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -116,6 +276,23 @@
             border-radius: 5px;
 
             &--subtitle {
+                @include respond(tab-land) {
+                    font-size: 3rem;
+                    font-weight: 300;
+                }
+
+                @include respond(tab-port) {
+                    margin-bottom: 1rem;
+                    font-size: 3.5rem;
+                    font-weight: 300;
+                }
+
+                @include respond(phone) {
+                    margin-bottom: 1rem;
+                    font-size: 3rem;
+                    font-weight: 300;
+                }
+
                 display: flex;
                 justify-self: center;
                 align-self: center;
@@ -130,6 +307,28 @@
             }
 
             &--list {
+
+                @include respond(tab-land) {
+                    margin-top: 2rem;
+                    margin-left: 0;
+                    font-weight: 300;
+                    font-size: 2rem;
+                }
+
+                @include respond(tab-port) {
+                    margin-top: 5rem;
+                    margin-left: 0;
+                    font-weight: 300;
+                    font-size: 3rem;
+                }
+
+                @include respond(phone) {
+                    margin-top: 4rem;
+                    margin-left: 0;
+                    font-weight: 300;
+                    font-size: 1.9rem;
+                }
+
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -141,11 +340,25 @@
 
                 font-weight: 200;
                 font-size: 2rem;
+
+                &---item {
+                    @include respond(tab-land) {
+                        margin: 0 0 5rem 0;
+                    }
+
+                    @include respond(tab-port) {
+                        margin: 0 0 5rem 0;
+                    }
+
+                    @include respond(phone) {
+                        margin: 0 0 3rem 0;
+                    }
+                }
             }
         }
     }
 
-    &__btn-text {
+    &_btn-text {
         display: flex;
         align-self: flex-start;
         justify-content: flex-end;
@@ -161,6 +374,24 @@
 /* SECTION ABOUT */
 
 .section-about {
+    @include respond(tab-land) {
+        height: 100vh;
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
+    @include respond(tab-port) {
+        height: 100vh;
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
+    @include respond(phone) {
+        height: 100vh;
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
     height: 70rem;
     border-radius: 3px;
     background-color: rgba($color-primary, .8);
@@ -170,6 +401,18 @@
     justify-content: flex-start;
 
     &__title {
+        @include respond(tab-land) {
+            margin-top: 3rem;
+        }
+
+        @include respond(tab-port) {
+            margin-top: 6rem;
+        }
+
+        @include respond(phone) {
+            margin-top: 4rem;
+        }
+
         display: flex;
         align-items: center;
         margin-top: 4rem;
@@ -188,12 +431,45 @@
     }
 
     &__content {
+
+        @include respond(tab-land) {
+            padding: 2rem 3rem;
+        }
+
+        @include respond(tab-port) {
+            padding: 2rem 3rem;
+        }
+
+        @include respond(phone) {
+            padding: 2rem 3rem;
+        }
+
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         padding: 4rem 10rem 3rem 10rem;
 
         &-container {
+            @include respond(tab-land) {
+                flex-direction: row;
+                width: 100%;
+                margin-top: 1rem;
+                padding: 1rem 3rem;
+            }
+
+            @include respond(tab-port) {
+                flex-direction: column;
+                width: 100%;
+                margin-top: 2rem;
+                padding: 4em 4rem 7.5rem 4rem;
+            }
+
+            @include respond(phone) {
+                flex-direction: column;
+                width: 100%;
+                padding: 3rem 3rem;
+            }
+
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -203,6 +479,14 @@
         }
 
         &-text {
+            @include respond(tab-port) {
+                width: 100%;
+            }
+
+            @include respond(phone) {
+                width: 100%;
+            }
+
             display: flex;
             flex-direction: column;
             width: 33%;
@@ -217,6 +501,16 @@
             }
 
             &--paragraph {
+                @include respond(tab-port) {
+                    font-weight: 200;
+                    font-size: 2.5rem;
+                }
+
+                @include respond(phone) {
+                    font-weight: 200;
+                    font-size: 1.8rem;
+                }
+
                 font-weight: 200;
                 font-size: 1.8rem;
             }
@@ -224,6 +518,10 @@
     }
 
     &__btn-text {
+        @include respond(tab-land) {
+            display: none;
+        }
+
         display: flex;
         align-self: flex-start;
         justify-content: flex-end;
@@ -240,6 +538,24 @@
 /* SECTION CONTACT */
 
 .section-contact {
+    @include respond(tab-land) {
+        height: 100vh;
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
+    @include respond(tab-port) {
+        height: 100vh;
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
+    @include respond(phone) {
+        height: 100vh;
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
     height: 70rem;
     display: flex;
     flex-direction: column;
@@ -248,6 +564,22 @@
     border-radius: 3px;
 
     &__title {
+        @include respond(tab-land) {
+            width: 50%;
+            margin: 6rem auto 2rem auto;
+        }
+
+        @include respond(tab-port) {
+            width: 50%;
+            margin: 6rem auto 2rem auto;
+        }
+
+        @include respond(phone) {
+            width: 50%;
+            padding: 0 2rem;
+            margin: 2rem auto
+        }
+
         display: flex;
         align-items: center;
         margin-top: 4.5rem;
@@ -266,11 +598,34 @@
     }
 
     &__content {
+        @include respond(tab-port) {
+            flex-direction: column;
+        }
+
+        @include respond(phone) {
+            flex-direction: column;
+        }
+
         display: flex;
         flex-direction: row;
         margin-bottom: 3rem;
 
         &-form {
+            @include respond(tab-land) {
+                width: 46%;
+                margin: 1rem auto;
+            }
+
+            @include respond(tab-port) {
+                width: 95%;
+                margin: 1rem auto;
+            }
+
+            @include respond(phone) {
+                width: 95%;
+                margin: 1rem auto;
+            }
+
             background-color: rgba($color-primary, .8);
             border-radius: 15px;
             margin: 1rem 3rem 1rem 10rem;
@@ -278,6 +633,24 @@
             width: 40%;
 
             &--subtitle {
+                @include respond(tab-land) {
+                    font-size: 3rem;
+                    font-weight: 200;
+                    margin: 1rem auto;
+                }
+
+                @include respond(tab-port) {
+                    font-size: 3rem;
+                    font-weight: 300;
+                    margin: 1rem auto;
+                }
+
+                @include respond(phone) {
+                    font-size: 3rem;
+                    font-weight: 300;
+                    margin: 1rem auto;
+                }
+
                 text-align: center;
                 display: flex;
                 justify-self: center;
@@ -298,6 +671,10 @@
             }
 
             &--btn {
+                @include respond(tab-land) {
+                    margin: 0rem 0 0 9rem;
+                }
+
                 display: flex;
                 margin: -6rem 0 0 25rem;
             }
@@ -305,6 +682,23 @@
         }
 
         &-address {
+            @include respond(tab-land) {
+                width: 46%;
+                margin: 1rem auto;
+            }
+
+            @include respond(tab-port) {
+                width: 95%;
+                height: 45vh;
+                margin: 1rem auto;
+            }
+
+            @include respond(phone) {
+                width: 95%;
+                height: 100%;
+                margin: 1rem auto;
+            }
+
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -315,6 +709,22 @@
             width: 40%;
 
             &--subtitle {
+                @include respond(tab-land) {
+                    font-size: 3rem;
+                    font-weight: 200;
+                    margin: 1rem 0 0 7rem;
+                }
+
+                @include respond(tab-port) {
+                    font-size: 3rem;
+                    font-weight: 300;
+                }
+
+                @include respond(phone) {
+                    font-size: 3rem;
+                    font-weight: 300;
+                }
+
                 display: flex;
                 justify-self: center;
                 align-self: flex-start;

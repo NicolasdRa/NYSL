@@ -1,4 +1,16 @@
 .navigation {
+    @include respond(tab-land) {
+        margin-top: 0rem;
+    }
+
+    @include respond(tab-port) {
+        margin-top: 0rem;
+    }
+
+    @include respond(phone) {
+        margin-top: 0rem;
+    }
+
     margin-top: 2rem;
     height: 7rem;
     border-bottom: grey;
@@ -41,22 +53,32 @@
         justify-content: flex-end;
 
         &-navlist {
+            @include respond(phone) {
+                margin: 0;
+                margin: 0 2rem 0 auto;
+            }
+
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
             margin-right: 1.5rem;
-            margin-bottom: .8rem; /* patches li top margin set on layout*/ 
+            margin-bottom: .8rem;
+            /* patches li top margin set on layout*/
 
             &not:last-child {
                 padding-right: 5rem;
-              }
+            }
 
             list-style: none;
 
             &--item {
+                @include respond(phone) {
+                    display: none;
+                }
+
                 margin: 0 2.2rem;
-                
+
                 &---link {
 
                     &:link,
@@ -76,4 +98,12 @@
             }
         }
     }
+}
+
+.phone-visible {
+    @include respond(phone) {
+        display: flex;
+        margin: 0 1.5rem;
+    }
+
 }

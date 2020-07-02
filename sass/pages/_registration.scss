@@ -1,4 +1,16 @@
 .registration {
+    @include respond(tab-land) {
+        width: 100vw;
+    }
+
+    @include respond(tab-port) {
+        width: 100vw;
+    }
+
+    @include respond(phone) {
+        width: 100vw;
+    }
+
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -6,6 +18,21 @@
     border-radius: 3px;
 
     &__title {
+        @include respond(tab-land) {
+            width: 35%;
+            margin: 1rem 2rem auto 18rem;
+        }
+
+        @include respond(tab-port) {
+            width: 35%;
+            margin: 1rem auto;
+        }
+
+        @include respond(phone) {
+            width: 50%;
+            margin: 0 auto;
+        }
+
         display: flex;
         align-items: center;
         margin: 0 0 3rem 0;
@@ -23,7 +50,47 @@
         font-size: 3rem;
     }
 
+    &__button-exit {
+        @include respond(tab-land) {
+            display: flex;
+            position: absolute;
+            right: 3rem;
+            top: 0;
+        }
+
+        @include respond(tab-port) {
+            display: flex;
+            position: absolute;
+            right: 3rem;
+            top: 1.5rem;
+        }
+
+        @include respond(phone) {
+            display: flex;
+            position: absolute;
+            right: 2rem;
+            top: -1rem;
+        }
+
+        display: flex;
+        position: absolute;
+        right: 12rem;
+        top: 2rem;
+    }
+
     &__subtitle {
+        @include respond(tab-land) {
+            margin: 0 auto 1.5rem auto;
+        }
+
+        @include respond(tab-port) {
+            margin: 0 auto 1.5rem auto;
+        }
+
+        @include respond(phone) {
+            margin: 1.5rem auto;
+        }
+
         display: flex;
         align-self: center;
         width: auto;
@@ -37,6 +104,24 @@
     }
 
     &__form {
+        @include respond(tab-land) {
+            width: 92%;
+            margin: 1.5rem auto;
+            padding: 2.5rem 4rem;
+        }
+
+        @include respond(tab-port) {
+            width: 92%;
+            margin: 1.5rem auto;
+            padding: 2.5rem 4rem;
+        }
+
+        @include respond(phone) {
+            width: 92%;
+            margin: 1.5rem auto;
+            padding: 2.5rem 4rem;
+        }
+
         display: flex;
         flex-direction: column;
 
@@ -56,6 +141,10 @@
         &-btn {
             align-self: center;
             width: auto;
+
+            @include respond(tab-port) {
+                padding: 1.5rem 4rem;
+            }
         }
 
         &-ddown {

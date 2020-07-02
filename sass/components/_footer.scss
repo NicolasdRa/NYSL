@@ -1,4 +1,25 @@
 .footer {
+    @include respond(tab-land) {
+        height: 100%;
+        padding: 1rem 0 5rem 0;
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
+    @include respond(tab-port) {
+        height: 30vh;
+        padding: 1rem 0 5rem 0;
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
+    @include respond(phone) {
+        height: 30vh;
+        padding: 1rem 0 5rem 0;
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
     background-color: $color-grey-dark;
     box-shadow: 0px 2rem 2rem $color-grey-dark;
     border-radius: 3px;
@@ -9,11 +30,41 @@
     justify-content: space-between;
 
     &__content {
+        @include respond(tab-land) {
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-content: center;
+        }
+
+        @include respond(tab-port) {
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-content: center;
+        }
+
+        @include respond(phone) {
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-content: center;
+        }
+
         display: flex;
         justify-content: space-between;
     }
 
     &__navigation {
+        @include respond(tab-land) {
+            display: none;
+        }
+
+        @include respond(tab-port) {
+            display: none;
+        }
+
+        @include respond(phone) {
+            display: none;
+        }
+
         display: flex;
         justify-content: center;
         width: 37.5%;
@@ -50,6 +101,21 @@
     }
 
     &__logo-copy {
+        @include respond(tab-land) {
+            width: 70%;
+            margin: 2.5rem auto;
+        }
+
+        @include respond(tab-port) {
+            width: 70%;
+            margin: 2.5rem auto;
+        }
+
+        @include respond(phone) {
+            width: 90%;
+            margin: 2rem auto;
+        }
+
         display: flex;
         justify-content: space-between;
         align-content: center;
@@ -110,11 +176,38 @@
     }
 
     &__social {
+        @include respond(tab-land) {
+            width: 90%;
+            margin: 0 auto 2rem auto;
+        }
+
+        @include respond(tab-port) {
+            width: 90%;
+            margin: 0 auto 2rem auto;
+        }
+
+        @include respond(phone) {
+            width: 90%;
+            margin: 0 auto 2rem auto;
+        }
+
         display: flex;
         justify-content: space-around;
         width: 37.5%;
 
         &-list {
+            @include respond(tab-land) {
+                margin: 0 auto;
+            }
+
+            @include respond(tab-port) {
+                margin: 0 auto;
+            }
+
+            @include respond(phone) {
+                margin: 0 auto;
+            }
+
             display: flex;
             list-style: none;
 

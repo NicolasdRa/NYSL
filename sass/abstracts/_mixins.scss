@@ -14,18 +14,17 @@
 }
 
 /* MEDIA QUERY MANAGER */
-
 /* Breakpoint arguments
 
--big-desk
--tab-port
--tab-land
--phone
+   0 -  600px: Phone            = phone                    (max)
+ 600 -  900px: Tablet Portrait  = tab-port                 (max)
+ 900 - 1200px: Tablet Landscape = tab-land                 (max)
+1200 - 1800px: Regular desktop  = NORMAL SETTINGSbig-desk
+1800 -> +++  : Big desktop      = big-desk                 (min)
 
 16px = 1em
 
 ORDER
-
 1. Base
 2. Typography
 3. Layout + Grid
@@ -34,29 +33,40 @@ ORDER
 
 */
 
-@mixin mq($breakpoint) {
-
+@mixin respond($breakpoint) {
     @if $breakpoint==big-desk {
         @media (min-width: 112.5em) {
-            @content     
-        }; /* 1800px/16 = 112.5em */
+            @content
+        }
+
+        ;
+        /* 1800px/16 = 112.5em */
     }
 
     @if $breakpoint==tab-land {
         @media (max-width: 77.25em) {
             @content
-        }; /* 1236px/16 = 77.25em */
+        }
+
+        ;
+        /* 1236px/16 = 77.25em */
     }
 
     @if $breakpoint==tab-port {
         @media (max-width: 56.25em) {
             @content
-        }; /* 900px/16 = 56.25em */
+        }
+
+        ;
+        /* 900px/16 = 56.25em */
     }
 
     @if $breakpoint==phone {
         @media (max-width: 37.25em) {
             @content
-        }; /* 600px/16 = 37.25em */
+        }
+
+        ;
+        /* 600px/16 = 37.25em */
     }
 }

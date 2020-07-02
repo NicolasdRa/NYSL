@@ -1,8 +1,14 @@
 .header {
+    @include respond(phone) {
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
     border-radius: 4px;
     margin-top: -7rem;
     height: 100vh;
-    background-image: linear-gradient(to right bottom, transparent, $color-secondary), url(/resources/sprint1/Youth-Soccer.jpg);
+    background-image: linear-gradient(to right bottom, transparent, $color-secondary),
+    url(/resources/sprint1/Youth-Soccer.jpg);
     background-size: cover;
     background-position: top;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .4);

@@ -20,44 +20,50 @@
 <body>
 
     <div class="container">
-        <div>
-            <a href="/index.html" class="button-exit button-1"><i class="button-exit__icon icofont-exit"></i></a>
-        </div>
+
         <section class="registration" id="registration">
             <h2 class="registration__title"><strong>Sign up to</strong>NYSL</h2>
+
+            <div class="registration__button-exit">
+                <a href="/index.html" class="button-exit button-1"><i class="button-exit__icon icofont-exit"></i></a>
+            </div>
+
             <form action="show_data.html" method="get" class="registration__form">
 
                 <h3 class="registration__subtitle">Registration Form</h3>
 
                 <label for="fn">Player’s First Name:</label>
                 <input type="text" name="firstname" id="fn" class="registration__form-input">
+                <br>
 
                 <label for="ln">Last Name:</label>
+
                 <input type="text" name="lastname" id="ln" class="registration__form-input">
-                <br><br>
+                <br>
 
                 <label for="sa">Street address:</label>
                 <input type="text" name="streetaddress" id="sa" class="registration__form-input">
-                <br><br>
+                <br>
 
                 <label for="city">City:</label>
-                <input type="text" name="city" id="city" class="registration__form-input">
+                <input type="text" name="city" id="city" class="registration__form-input"><br>
 
                 <label for="zip">Zip:</label>
                 <input type="text" name="zip" id="zip" class="registration__form-input">
-                <br><br>
+                <br>
 
                 <label for="dof">Date of Birth (mm/dd/yyyy):</label>
                 <input type="date" name="dof" id="dof" class="registration__form-input">
-                <br><br>
-
-                <p>Gender</p>
-                <input type="radio" name="gender" id="male" value="male" />
-                <label for="male">Male</label>
-                <input type="radio" name="gender" id="female" value="female" />
-                <label for="female">Female</label>
-                <br><br>
-
+                <br>
+                <div class="gender">
+                    <p>Gender</p>
+                    <input type="radio" name="gender" id="male" value="male" />
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="female" value="female" />
+                    <label for="female">Female</label>
+                    <br>
+                </div>
+                <br>
                 <label for="grade">Grade:</label>
                 <select name="grade" id="grade" class="registration__form-ddown">
                     <option value="pre-school">Pre-School
@@ -67,18 +73,18 @@
                     <option value="4th">4th
                     <option value="5th">5th
                 </select>
-                <br><br>
+                <br>
 
                 <label for="parent">Parent / Guardian:</label>
                 <input type="text" name="parent" id="parent" class="registration__form-input">
-                <br><br>
+                <br>
 
                 <label for="pn">Phone number:</label>
                 <input type="number" name="pn" id="pn" class="registration__form-input">
 
                 <label for="email">E-mail:</label>
                 <input type="email" name="email" id="email" required class="registration__form-input">
-                <br><br>
+                <br>
 
                 <p>Which elementary schools do you live near?
                 </p>
@@ -102,21 +108,23 @@
                     <option value="North Elementary">North Elementary
                     <option value="South Elementary">South Elementary
                 </select>
-                <br><br>
+                <br>
+                <div class="positions">
+                    <p>What position(s) do you normally play? (check all that apply)</p>
 
-                <p>What position(s) do you normally play? (check all that apply)</p>
-
-                <input type="checkbox" name="positions" value="Forward">Forward
-                <input type="checkbox" name="positions" value="Defense">Defense
-                <input type="checkbox" name="positions" value="Midfield">Midfield
-                <input type="checkbox" name="positions" value="Goalkeeper">Goalkeeper
-                <br><br>
-
-                <p>Already have a uniform?</p>
-                <input type="radio" name="uniform" value="yes" class="registration__form-radiobtn">Yes
-                <input type="radio" name="uniform" value="no" class="registration__form-radiobtn">No
-                <br><br>
-
+                    <input type="checkbox" name="positions" value="Forward">Forward
+                    <input type="checkbox" name="positions" value="Defense">Defense
+                    <input type="checkbox" name="positions" value="Midfield">Midfield
+                    <input type="checkbox" name="positions" value="Goalkeeper">Goalkeeper
+                    <br>
+                </div>
+                <br>
+                <div class="uniforms">
+                    <p>Already have a uniform?</p>
+                    <input type="radio" name="uniform" value="yes" class="registration__form-radiobtn">Yes
+                    <input type="radio" name="uniform" value="no" class="registration__form-radiobtn">No
+                </div>
+                <br>
                 <label for="jsize">Jersey Size</label>
                 <select name="jsize" id="jsize" class="registration__form-ddown">
                     <option value="Youth Small" selected>Youth Small</option>
@@ -138,7 +146,7 @@
                     <option value="Large">Large</option>
                     <option value="Extra-Large">Extra-Large</option>
                 </select>
-                <br><br>
+                <br>
 
                 <h4 class="registration__form-text_title">Permission to Play</h4>
                 <p>I, the parent or guardian of the minor registrant, agree that the registrant and
@@ -168,7 +176,7 @@
 
                 <label for="date">Date (mm/dd/yyyy):</label>
                 <input type="date" name="date" id="date" class="registration__form-input">
-                <br><br>
+                <br>
 
                 <button type="submit" value="Submit"
                     class="btn btn-nysl--grey btn--animated registration__form-btn">Submit</button>

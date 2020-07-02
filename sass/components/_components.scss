@@ -1,6 +1,4 @@
-
 .navigation {
-
     margin-top: 2rem;
     height: 7rem;
     background-color: rgba($color-grey-mid, .2);
@@ -13,38 +11,32 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
-    
+
         padding: 1.3rem 2.5rem;
         margin-left: -.3rem;
         background-color: rgba($color-primary, .8);
         -webkit-clip-path: polygon(0% 0%, 100% 0%, 93% 100%, 0% 100%);
         clip-path: polygon(0% 0%, 100% 0%, 93% 100%, 0% 100%);
         ;
-    
+
         &--logo {
             height: 5rem;
             width: 5rem;
         }
-    
+
         &--acronym {
             padding-left: 2rem;
             color: rgba($color-grey-light-1, .9);
         }
     }
 
-
-
-
-
-
-
-
     &__nav {
 
         list-style: none;
         display: flex;
         justify-content: flex-end;
-        align-items: center;;
+        align-items: center;
+        ;
         align-items: center;
 
         margin-right: 1rem;

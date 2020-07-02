@@ -1,10 +1,23 @@
 .game-info__content {
+
     display: flex;
     justify-content: space-between;
     height: 100%;
     padding-top: 1rem;
 
     &-center {
+        @include respond(tab-land) {
+            padding-bottom: 4rem;
+        }
+
+        @include respond(tab-port) {
+            padding-bottom: 4rem;
+        }
+
+        @include respond(phone) {
+            padding-bottom: 4rem;
+        }
+
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -19,7 +32,7 @@
         &__heading {
             display: flex;
             flex-direction: column;
-            text-align: center;
+            align-items: center;
 
             &-title {
                 display: flex;
@@ -43,6 +56,20 @@
             }
         }
 
+        &_button-exit {
+            @include respond(tab-land) {
+                display: none;
+            }
+
+            @include respond(tab-port) {
+                display: none;
+            }
+
+            @include respond(phone) {
+                display: none;
+            }
+        }
+
         &__table {
 
             &-september {
@@ -59,6 +86,21 @@
         }
 
         &__map-container {
+            @include respond(tab-land) {
+                width: 100%;
+                padding: 1rem 2rem 2rem 2rem;
+            }
+
+            @include respond(tab-port) {
+                width: 100%;
+                padding: 1rem 2rem 2rem 2rem;
+            }
+
+            @include respond(phone) {
+                width: 100%;
+                padding: 1rem 2rem 2rem 2rem;
+            }
+
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -77,6 +119,18 @@
             }
 
             &--map {
+                @include respond(tab-land) {
+                    height: 50rem;
+                }
+
+                @include respond(tab-port) {
+                    height: 50rem;
+                }
+
+                @include respond(phone) {
+                    height: 50rem;
+                }
+
                 margin: 1rem;
                 border-radius: 10px;
                 opacity: .8;
@@ -148,6 +202,28 @@
     }
 
     &-left {
+
+        @include respond(tab-land) {
+            margin-left: 3rem;
+            margin-bottom: 7rem;
+            padding-left: 3rem;
+            height: auto;
+        }
+
+        @include respond(tab-port) {
+            margin-left: 1rem;
+            margin-bottom: 7rem;
+            padding-left: 2rem;
+            height: auto;
+        }
+
+        @include respond(phone) {
+            margin-left: 1rem;
+            margin-bottom: 7rem;
+            padding-left: 2rem;
+            height: auto;
+        }
+
         display: flex;
 
         margin-top: 5rem;
@@ -164,6 +240,27 @@
     }
 
     &-right {
+        @include respond(tab-land) {
+            margin-right: 3rem;
+            margin-bottom: 7rem;
+            padding-right: 3rem;
+            height: auto;
+        }
+
+        @include respond(tab-port) {
+            margin-right: 1rem;
+            margin-bottom: 7rem;
+            padding-right: 2rem;
+            height: auto;
+        }
+
+        @include respond(phone) {
+            margin-right: 1rem;
+            margin-bottom: 7rem;
+            padding-right: 2rem;
+            height: auto;
+        }
+
         display: flex;
 
         margin-top: 5rem;
@@ -179,4 +276,5 @@
         border-right: 2px solid rgba($color-primary, .8);
         border-radius: 5px;
     }
+
 }

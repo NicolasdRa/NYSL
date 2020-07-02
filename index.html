@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="/css/icofont.css">
@@ -31,22 +32,20 @@
 
             <div class="navigation__navcontainer">
                 <ul class="navigation__navcontainer-navlist">
-                    <li class="navigation__navcontainer-navlist--item">
-                        <a href=#section-home class="navigation__navcontainer-navlist--item---link">home</a>
-                    </li>
+
                     <li class="navigation__navcontainer-navlist--item">
                         <a href=#section-events class="navigation__navcontainer-navlist--item---link">events</a>
                     </li>
                     <li class="navigation__navcontainer-navlist--item">
                         <a href=#section-about class="navigation__navcontainer-navlist--item---link">about</a>
                     </li>
-                    <li class="navigation__navcontainer-navlist--item">
-                            <a href=rules.html class="navigation__navcontainer-navlist--item---link">rules</a>
-                        </li>
+                    <li class="navigation__navcontainer-navlist--item phone-visible">
+                        <a href=rules.html class="navigation__navcontainer-navlist--item---link">rules</a>
+                    </li>
                     <li class="navigation__navcontainer-navlist--item">
                         <a href=#section-contact class="navigation__navcontainer-navlist--item---link">contact</a>
                     </li>
-                    <li class="navigation__navcontainer-navlist--item">
+                    <li class="navigation__navcontainer-navlist--item phone-visible">
                         <a href="registration.html" class="navigation__navcontainer-navlist--item---link">sign-up</a>
                     </li>
                 </ul>
@@ -81,16 +80,19 @@
                 <div class="section-events__container-center">
                     <h2 class="section-events__container-center--title"><strong> UPCOMING</strong>&nbsp;EVENTS</h2>
                     <a href="/game_info.html"
-                        class="btn btn-nysl--primary btn--animated section-events__container-center--button">Full
-                        Schedule & details</a>
+                        class="btn btn-nysl--primary btn--animated section-events__container-center--button">
+                        Schedule</a>
                 </div>
 
                 <div class="section-events__container-right">
-                    <h3 class="section-events__container-right--subtitle"><strong> SEASON</strong>&nbsp;KISCKOFF</h3>
+                    <h3 class="section-events__container-right--subtitle"><strong> SEASON</strong>&nbsp;KICKOFF</h3>
                     <ul class="section-events__container-right--list">
-                        <li><strong>AUGUST 4</strong><br>NYSL Fundraiser</li>
-                        <li><strong>AUGUST 16</strong><br>Season Kickoff: Meet the Teams</li>
-                        <li><strong>SEPTEMBER 1</strong><br>First Game of the Season (Check Game Schedule for details)
+                        <li class="section-events__container-right--list---item"><strong>AUGUST 4</strong><br>NYSL
+                            Fundraiser</li>
+                        <li class="section-events__container-right--list---item"><strong>AUGUST 16</strong><br>Season
+                            Kickoff: Meet the Teams</li>
+                        <li class="section-events__container-right--list---item"><strong>SEPTEMBER 1</strong><br>First
+                            Game of the Season (Check Game Schedule for details)
                         </li>
                     </ul>
                 </div>

@@ -1,10 +1,19 @@
 .rules__content {
+    @include respond(phone) {
+        margin-bottom: 2.5rem;
+    }
+
     display: flex;
     justify-content: space-between;
     height: 100%;
     padding-top: 1rem;
 
     &-center {
+
+        @include respond(phone) {
+            width: 86%;
+        }
+
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -36,6 +45,10 @@
         }
 
         &__rules {
+            @include respond(phone) {
+                margin-bottom: 5rem;
+            }
+
             color: rgba($color-grey-light-1, .7);
             margin-bottom: 7rem;
 
@@ -51,13 +64,35 @@
     }
 
     &-left {
+        @include respond(tab-land) {
+            margin-left: 3rem;
+            width: 10%;
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @include respond(tab-port) {
+            margin-left: 2rem;
+            width: 10%;
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @include respond(phone) {
+            margin-left: 1.5rem;
+            width: 7%;
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+        }
+
         display: flex;
 
         margin-top: 5rem;
         margin-left: 10rem;
         padding-left: 10rem;
+        margin-bottom: 2rem;
 
-        height: 400rem;
+        // height: 400rem;
         width: 10%;
 
         border-top: 2px solid $color-primary;
@@ -67,14 +102,35 @@
     }
 
     &-right {
+        @include respond(tab-land) {
+            margin-right: 3rem;
+            width: 10%;
+            padding-right: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @include respond(tab-port) {
+            margin-right: 2rem;
+            width: 10%;
+            padding-right: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @include respond(phone) {
+            margin-right: 1.5rem;
+            width: 7%;
+            padding-right: 2rem;
+            margin-bottom: 2rem;
+        }
+
         display: flex;
 
         margin-top: 5rem;
         margin-right: 10rem;
         padding-right: 10rem;
-        margin-bottom: 8rem;
+        margin-bottom: 2rem;
 
-        height: 400rem;
+        // height: 400rem;
         width: 10%;
 
         border-top: 2px solid $color-primary;
