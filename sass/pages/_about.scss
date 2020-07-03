@@ -16,6 +16,11 @@
         width: 100vw;
     }
 
+    @include respond(phone-small) {
+        height: 120vh;
+        width: 100vw;
+    }
+
     @include respond(phone-land) {
         height: 135vh;
         width: 100vw;

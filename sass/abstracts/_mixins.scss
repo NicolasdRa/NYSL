@@ -79,4 +79,13 @@ ORDER
         ;
         /* 600px/16 = 37.25em */
     }
+
+    @if $breakpoint==phone-small {
+        @media (max-width: 23.75em) {
+            @content
+        }
+
+        ;
+        /*380/16 = 23.75em */
+    }
 }

@@ -28,8 +28,14 @@
             margin: 1rem auto;
         }
 
+
         @include respond(phone) {
             width: 50%;
+            margin: 0 auto;
+        }
+
+        @include respond(phone-small) {
+            width: 57%;
             margin: 0 auto;
         }
 
