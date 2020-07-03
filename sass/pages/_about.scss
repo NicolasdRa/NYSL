@@ -1,0 +1,176 @@
+/* SECTION ABOUT */
+
+.section-about {
+    @include respond(tab-land) {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    @include respond(tab-port) {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    @include respond(phone) {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    @include respond(phone-land) {
+        height: 135vh;
+        width: 100vw;
+    }
+
+    height: 70rem;
+    border-radius: 3px;
+    background-color: rgba($color-primary, .8);
+    box-shadow: 0px 2rem 2rem $color-grey-dark-1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    &__title {
+        @include respond(tab-land) {
+            margin-top: 3rem;
+        }
+
+        @include respond(tab-port) {
+            margin-top: 6rem;
+        }
+
+        @include respond(phone) {
+            margin-top: 4rem;
+        }
+
+        @include respond(phone-land) {
+            margin-top: 2rem;
+        }
+
+        display: flex;
+        align-items: center;
+        margin-top: 4rem;
+        margin-left: 15rem;
+        padding-left: 5rem;
+        width: 40%;
+
+        background-color: $color-grey-dark;
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
+        clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
+        border-radius: 4px;
+
+        color: rgba($color-primary, .8);
+        font-weight: 100;
+        font-size: 3rem;
+    }
+
+    &__content {
+        @include respond(tab-land) {
+            padding: 2rem 3rem;
+        }
+
+        @include respond(tab-port) {
+            padding: 2rem 3rem;
+        }
+
+        @include respond(phone) {
+            padding: 2rem 3rem;
+        }
+
+        @include respond(phone-land) {
+            padding: 2rem 2rem;
+        }
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 4rem 10rem 3rem 10rem;
+
+        &-container {
+            @include respond(tab-land) {
+                flex-direction: row;
+                width: 100%;
+                padding: 1rem 3rem;
+            }
+
+            @include respond(tab-port) {
+                flex-direction: column;
+                width: 100%;
+                padding: 4em 4rem 7.5rem 4rem;
+            }
+
+            @include respond(phone) {
+                flex-direction: column;
+                width: 100%;
+                padding: 3rem 3rem;
+            }
+
+            @include respond(phone-land) {
+                flex-direction: row;
+                width: 100%;
+                padding: 1rem 2rem;
+            }
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 3rem 3rem;
+            background-color: $color-grey-dark;
+            border-radius: 15px;
+        }
+
+        &-text {
+            @include respond(tab-port) {
+                width: 100%;
+            }
+
+            @include respond(phone) {
+                width: 100%;
+            }
+
+            display: flex;
+            flex-direction: column;
+            width: 33%;
+            height: 100%;
+            padding: 2rem 2rem;
+            color: $color-primary;
+
+            &--subtitle {
+                color: whitesmoke;
+                font-weight: 300;
+                font-size: 3rem;
+            }
+
+            &--paragraph {
+                @include respond(tab-port) {
+                    font-weight: 200;
+                    font-size: 2.5rem;
+                }
+
+                @include respond(phone) {
+                    font-weight: 200;
+                    font-size: 1.8rem;
+                }
+
+                @include respond(phone-land) {
+                    font-weight: 200;
+                    font-size: 1.8rem;
+                }
+
+                font-weight: 200;
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    &__btn-text {
+        display: flex;
+        align-self: flex-start;
+        justify-content: flex-end;
+        margin: 0 0 0 15rem;
+        width: 10%;
+
+        color: rgba($color-grey-dark-2, .8);
+        font-weight: 100;
+        font-size: 3rem;
+    }
+}

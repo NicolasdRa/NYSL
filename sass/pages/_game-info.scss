@@ -35,6 +35,10 @@
             align-items: center;
 
             &-title {
+                @include respond(phone-land) {
+                    margin-top: 0rem;
+                }
+
                 display: flex;
                 margin-top: 2rem;
                 color: rgba($color-primary, .8);

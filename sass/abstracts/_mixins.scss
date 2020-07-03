@@ -16,11 +16,12 @@
 /* MEDIA QUERY MANAGER */
 /* Breakpoint arguments
 
-   0 -  600px: Phone            = phone                    (max)
- 600 -  900px: Tablet Portrait  = tab-port                 (max)
- 900 - 1200px: Tablet Landscape = tab-land                 (max)
+   0 -  600px: Phone            = phone                    (max-width)
+ 736 -  414px: Phone Landscape  = phone-land               (max-height)
+ 600 -  900px: Tablet Portrait  = tab-port                 (max-width)
+ 900 - 1200px: Tablet Landscape = tab-land                 (max-width)
 1200 - 1800px: Regular desktop  = NORMAL SETTINGSbig-desk
-1800 -> +++  : Big desktop      = big-desk                 (min)
+1800 -> +++  : Big desktop      = big-desk                 (min-width)
 
 16px = 1em
 
@@ -34,6 +35,15 @@ ORDER
 */
 
 @mixin respond($breakpoint) {
+    @if $breakpoint==phone-land {
+        @media (max-height: 25.875em) {
+            @content
+        }
+
+        ;
+        /* 414px/16 = 25.875em */
+    }
+
     @if $breakpoint==big-desk {
         @media (min-width: 112.5em) {
             @content

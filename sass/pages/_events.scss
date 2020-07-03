@@ -5,21 +5,23 @@
         height: 100vh;
         padding: 10rem 2rem 5rem 2rem;
         width: 100vw;
-        overflow: hidden;
     }
 
     @include respond(tab-port) {
         height: 100vh;
         padding: 11rem 2rem 15rem 2rem;
         width: 100vw;
-        overflow: hidden;
     }
 
     @include respond(phone) {
         height: 100vh;
         padding: 6rem, 2rem;
         width: 100vw;
-        overflow: hidden;
+    }
+
+    @include respond(phone-land) {
+        padding: 8rem 0 9rem 0;
+        height: 110vh;
     }
 
     height: 70rem;
@@ -43,6 +45,10 @@
             margin-top: 2rem;
         }
 
+        @include respond(phone-land) {
+            margin-top: 1rem;
+        }
+
         display: flex;
         width: 100%;
 
@@ -62,6 +68,12 @@
             @include respond(phone) {
                 margin-left: 1rem;
                 width: 33%;
+            }
+
+            @include respond(phone-land) {
+                margin-left: 2rem;
+                width: 40%;
+                padding: 1rem 0 0 1rem;
             }
 
             display: flex;
@@ -98,6 +110,12 @@
                     margin-bottom: 1rem;
                 }
 
+                @include respond(phone-land) {
+                    margin-bottom: 0;
+                    font-size: 2.5rem;
+                    font-weight: 300;
+                }
+
                 display: flex;
                 justify-self: center;
                 align-self: center;
@@ -126,6 +144,11 @@
                     margin-left: 0;
                 }
 
+                @include respond(phone-land) {
+                    margin-top: 1rem;
+                    margin-left: 0;
+                }
+
                 display: flex;
                 justify-content: center;
                 flex-wrap: wrap;
@@ -145,6 +168,11 @@
                     @include respond(phone) {
                         max-width: 78%;
                         margin-top: 1rem;
+                    }
+
+                    @include respond(phone-land) {
+                        max-width: 40%;
+                        margin-top: .5rem;
                     }
 
                     box-shadow: 0 1.5rem 4rem rgba($color-black, .5);
@@ -175,6 +203,10 @@
                 width: 30%;
             }
 
+            @include respond(phone-land) {
+                width: 20%;
+            }
+
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -199,6 +231,11 @@
 
                 @include respond(phone) {
                     margin-top: -7.5rem;
+                    margin-bottom: 2rem;
+                }
+
+                @include respond(phone-land) {
+                    margin-top: -8rem;
                     margin-bottom: 2rem;
                 }
 
@@ -256,6 +293,12 @@
                 padding-right: 6rem;
             }
 
+            @include respond(phone-land) {
+                margin-right: 2rem;
+                width: 40%;
+                padding: 1rem 1rem 0 0;
+            }
+
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -290,6 +333,12 @@
                 @include respond(phone) {
                     margin-bottom: 1rem;
                     font-size: 3rem;
+                    font-weight: 300;
+                }
+
+                @include respond(phone-land) {
+                    margin-bottom: 0;
+                    font-size: 2.5rem;
                     font-weight: 300;
                 }
 
@@ -329,6 +378,13 @@
                     font-size: 1.9rem;
                 }
 
+                @include respond(phone-land) {
+                    margin-top: 1rem;
+                    margin-left: 0;
+                    font-weight: 300;
+                    font-size: 1.9rem;
+                }
+
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -353,417 +409,20 @@
                     @include respond(phone) {
                         margin: 0 0 3rem 0;
                     }
+
+                    @include respond(phone-land) {
+                        margin: 0 0 1.3rem 0;
+                    }
                 }
             }
         }
     }
 
-    &_btn-text {
+    &__btn-text {
         display: flex;
         align-self: flex-start;
         justify-content: flex-end;
         margin: 5rem 0 0 15rem;
-        width: 10%;
-
-        color: rgba($color-grey-light-1, .5);
-        font-weight: 100;
-        font-size: 3rem;
-    }
-}
-
-/* SECTION ABOUT */
-
-.section-about {
-    @include respond(tab-land) {
-        height: 100vh;
-        width: 100vw;
-        overflow-x: hidden;
-    }
-
-    @include respond(tab-port) {
-        height: 100vh;
-        width: 100vw;
-        overflow-x: hidden;
-    }
-
-    @include respond(phone) {
-        height: 100vh;
-        width: 100vw;
-        overflow-x: hidden;
-    }
-
-    height: 70rem;
-    border-radius: 3px;
-    background-color: rgba($color-primary, .8);
-    box-shadow: 0px 2rem 2rem $color-grey-dark-1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-
-    &__title {
-        @include respond(tab-land) {
-            margin-top: 3rem;
-        }
-
-        @include respond(tab-port) {
-            margin-top: 6rem;
-        }
-
-        @include respond(phone) {
-            margin-top: 4rem;
-        }
-
-        display: flex;
-        align-items: center;
-        margin-top: 4rem;
-        margin-left: 15rem;
-        padding-left: 5rem;
-        width: 40%;
-
-        background-color: $color-grey-dark;
-        -webkit-clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
-        clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
-        border-radius: 4px;
-
-        color: rgba($color-primary, .8);
-        font-weight: 100;
-        font-size: 3rem;
-    }
-
-    &__content {
-
-        @include respond(tab-land) {
-            padding: 2rem 3rem;
-        }
-
-        @include respond(tab-port) {
-            padding: 2rem 3rem;
-        }
-
-        @include respond(phone) {
-            padding: 2rem 3rem;
-        }
-
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 4rem 10rem 3rem 10rem;
-
-        &-container {
-            @include respond(tab-land) {
-                flex-direction: row;
-                width: 100%;
-                margin-top: 1rem;
-                padding: 1rem 3rem;
-            }
-
-            @include respond(tab-port) {
-                flex-direction: column;
-                width: 100%;
-                margin-top: 2rem;
-                padding: 4em 4rem 7.5rem 4rem;
-            }
-
-            @include respond(phone) {
-                flex-direction: column;
-                width: 100%;
-                padding: 3rem 3rem;
-            }
-
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            padding: 3rem 3rem;
-            background-color: $color-grey-dark;
-            border-radius: 15px;
-        }
-
-        &-text {
-            @include respond(tab-port) {
-                width: 100%;
-            }
-
-            @include respond(phone) {
-                width: 100%;
-            }
-
-            display: flex;
-            flex-direction: column;
-            width: 33%;
-            height: 100%;
-            padding: 2rem 2rem;
-            color: $color-primary;
-
-            &--subtitle {
-                color: whitesmoke;
-                font-weight: 300;
-                font-size: 3rem;
-            }
-
-            &--paragraph {
-                @include respond(tab-port) {
-                    font-weight: 200;
-                    font-size: 2.5rem;
-                }
-
-                @include respond(phone) {
-                    font-weight: 200;
-                    font-size: 1.8rem;
-                }
-
-                font-weight: 200;
-                font-size: 1.8rem;
-            }
-        }
-    }
-
-    &__btn-text {
-        @include respond(tab-land) {
-            display: none;
-        }
-
-        display: flex;
-        align-self: flex-start;
-        justify-content: flex-end;
-        margin: 0 0 0 15rem;
-        width: 10%;
-
-        color: rgba($color-grey-dark-2, .8);
-        font-weight: 100;
-        font-size: 3rem;
-    }
-}
-
-
-/* SECTION CONTACT */
-
-.section-contact {
-    @include respond(tab-land) {
-        height: 100vh;
-        width: 100vw;
-        overflow-x: hidden;
-    }
-
-    @include respond(tab-port) {
-        height: 100vh;
-        width: 100vw;
-        overflow-x: hidden;
-    }
-
-    @include respond(phone) {
-        height: 100vh;
-        width: 100vw;
-        overflow-x: hidden;
-    }
-
-    height: 70rem;
-    display: flex;
-    flex-direction: column;
-    background-color: rgba($color-grey-dark, .8);
-    box-shadow: 0px 2rem 2rem $color-grey-dark-1;
-    border-radius: 3px;
-
-    &__title {
-        @include respond(tab-land) {
-            width: 50%;
-            margin: 6rem auto 2rem auto;
-        }
-
-        @include respond(tab-port) {
-            width: 50%;
-            margin: 6rem auto 2rem auto;
-        }
-
-        @include respond(phone) {
-            width: 50%;
-            padding: 0 2rem;
-            margin: 2rem auto
-        }
-
-        display: flex;
-        align-items: center;
-        margin-top: 4.5rem;
-        margin-left: 15rem;
-        margin-bottom: 3rem;
-        padding: 0 5rem;
-        width: 40%;
-
-        background-color: rgba($color-primary, .8);
-        clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
-        border-radius: 4px;
-
-        color: rgba($color-grey-dark, .8);
-        font-weight: 300;
-        font-size: 3rem;
-    }
-
-    &__content {
-        @include respond(tab-port) {
-            flex-direction: column;
-        }
-
-        @include respond(phone) {
-            flex-direction: column;
-        }
-
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 3rem;
-
-        &-form {
-            @include respond(tab-land) {
-                width: 46%;
-                margin: 1rem auto;
-            }
-
-            @include respond(tab-port) {
-                width: 95%;
-                margin: 1rem auto;
-            }
-
-            @include respond(phone) {
-                width: 95%;
-                margin: 1rem auto;
-            }
-
-            background-color: rgba($color-primary, .8);
-            border-radius: 15px;
-            margin: 1rem 3rem 1rem 10rem;
-            padding: 2rem 8rem;
-            width: 40%;
-
-            &--subtitle {
-                @include respond(tab-land) {
-                    font-size: 3rem;
-                    font-weight: 200;
-                    margin: 1rem auto;
-                }
-
-                @include respond(tab-port) {
-                    font-size: 3rem;
-                    font-weight: 300;
-                    margin: 1rem auto;
-                }
-
-                @include respond(phone) {
-                    font-size: 3rem;
-                    font-weight: 300;
-                    margin: 1rem auto;
-                }
-
-                text-align: center;
-                display: flex;
-                justify-self: center;
-                align-self: center;
-                color: $color-grey-light-1;
-                font-size: 2rem;
-                font-weight: 300;
-
-                margin: 1rem;
-                width: auto;
-            }
-
-            &--input {
-                background-color: transparent;
-                border: none;
-                border-bottom: 1px solid $color-grey-dark;
-                width: 70%;
-            }
-
-            &--btn {
-                @include respond(tab-land) {
-                    margin: 0rem 0 0 9rem;
-                }
-
-                display: flex;
-                margin: -6rem 0 0 25rem;
-            }
-
-        }
-
-        &-address {
-            @include respond(tab-land) {
-                width: 46%;
-                margin: 1rem auto;
-            }
-
-            @include respond(tab-port) {
-                width: 95%;
-                height: 45vh;
-                margin: 1rem auto;
-            }
-
-            @include respond(phone) {
-                width: 95%;
-                height: 100%;
-                margin: 1rem auto;
-            }
-
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            background-color: rgba($color-primary, .8);
-            border-radius: 15px;
-            margin: 1rem 10rem 1rem 2rem;
-            padding: 2.5rem 4rem;
-            width: 40%;
-
-            &--subtitle {
-                @include respond(tab-land) {
-                    font-size: 3rem;
-                    font-weight: 200;
-                    margin: 1rem 0 0 7rem;
-                }
-
-                @include respond(tab-port) {
-                    font-size: 3rem;
-                    font-weight: 300;
-                }
-
-                @include respond(phone) {
-                    font-size: 3rem;
-                    font-weight: 300;
-                }
-
-                display: flex;
-                justify-self: center;
-                align-self: flex-start;
-                color: $color-grey-light-1;
-                font-size: 2rem;
-                font-weight: 300;
-
-                margin: 1rem 0 3rem 8rem;
-                width: auto;
-            }
-
-            &--text {
-                margin-left: 7rem;
-                margin-bottom: 1rem;
-                color: rgba($color-grey-dark-1, 1);
-            }
-
-            &--map {
-                display: flex;
-                align-self: center;
-                border-radius: 5px;
-                background-color: rgba($color-primary, .5);
-                opacity: .7;
-                transition: all .2s;
-
-                &:hover {
-                    transform: scale(1.03);
-                    box-shadow: 0 1rem 6rem rgba($color-grey-dark-1, .4);
-                }
-
-            }
-        }
-    }
-
-    &__btn-text {
-        display: flex;
-        align-self: flex-start;
-        justify-content: flex-end;
-        margin: 0 0 0 15rem;
         width: 10%;
 
         color: rgba($color-grey-light-1, .5);

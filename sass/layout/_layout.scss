@@ -11,14 +11,17 @@ body {
 .container {
   @include respond(tab-land) {
     margin: 0;
+    padding: 0;
   }
 
   @include respond(tab-port) {
     margin: 0;
+    padding: 0;
   }
 
   @include respond(phone) {
     margin: 0;
+    padding: 0;
   }
 
   margin: 2rem 3rem;
@@ -33,7 +36,6 @@ body {
 /* LIST INDENTATION */
 
 /* Main Level */
-
 ul {
   margin-left: 1.5rem;
   margin-top: 1.5rem;
@@ -45,13 +47,11 @@ ol {
 }
 
 /* Second Level */
-
 ul ul {
   margin-left: 2rem;
 }
 
 /* Third Level */
-
 ul ul ul {
   margin-left: 2.5rem;
 }
@@ -75,7 +75,6 @@ table {
   @include respond(phone) {
     width: 100%;
   }
-
 
   width: 80rem;
   border: 1px solid rgba($color-primary, .6);

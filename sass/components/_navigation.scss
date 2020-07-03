@@ -1,14 +1,17 @@
 .navigation {
     @include respond(tab-land) {
-        margin-top: 0rem;
+        margin: 0;
+        padding: 0;
     }
 
     @include respond(tab-port) {
-        margin-top: 0rem;
+        margin: 0;
+        padding: 0;
     }
 
     @include respond(phone) {
-        margin-top: 0rem;
+        margin: 0;
+        padding: 0;
     }
 
     margin-top: 2rem;
@@ -42,6 +45,18 @@
     }
 
     &__navcontainer {
+        @include respond(tab-land) {
+            margin-right: 0;
+        }
+
+        @include respond(tab-port) {
+            margin-right: 0;
+        }
+
+        @include respond(phone) {
+            margin-right: 0;
+        }
+
         flex: 1 1 auto;
         z-index: 1;
         margin-left: -1.2rem;
@@ -54,8 +69,12 @@
 
         &-navlist {
             @include respond(phone) {
-                margin: 0;
                 margin: 0 2rem 0 auto;
+            }
+
+            @include respond(phone-land) {
+                margin: 0 5rem 0 auto;
+
             }
 
             display: flex;
@@ -74,6 +93,10 @@
 
             &--item {
                 @include respond(phone) {
+                    display: none;
+                }
+
+                @include respond(phone-land) {
                     display: none;
                 }
 
@@ -104,6 +127,11 @@
     @include respond(phone) {
         display: flex;
         margin: 0 1.5rem;
+    }
+
+    @include respond(phone-land) {
+        display: flex;
+        margin: 0 2rem;
     }
 
 }

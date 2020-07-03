@@ -1,7 +1,18 @@
 .header {
+    @include respond(phone-land) {
+        height: 100vh;
+    }
+
+    @include respond(tab-land) {
+        width: 100vw;
+    }
+
+    @include respond(tab-port) {
+        width: 100vw;
+    }
+
     @include respond(phone) {
         width: 100vw;
-        overflow-x: hidden;
     }
 
     border-radius: 4px;
@@ -16,6 +27,10 @@
     flex-direction: row-reverse;
 
     &__title-container {
+        @include respond(phone-land) {
+            margin-bottom: 2rem;
+        }
+
         margin-bottom: 10rem;
         display: flex;
         justify-content: flex-start;

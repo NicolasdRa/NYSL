@@ -4,15 +4,17 @@
 
 @import "base/_base.scss";
 
+@import "layout/_layout.scss";
+
 @import "components/_navigation.scss";
-@import "components/_header.scss";
 @import "components/_footer.scss";
 @import "components/_button.scss";
 @import "components/_composition.scss";
 
-@import "layout/_layout.scss";
-
-@import "pages/_index.scss";
+@import "pages/_header.scss";
+@import "pages/_events.scss";
+@import "pages/_about.scss";
+@import "pages/_contact.scss";
 @import "pages/_rules.scss";
 @import "pages/_game-info.scss";
 @import "pages/_registration.scss";
