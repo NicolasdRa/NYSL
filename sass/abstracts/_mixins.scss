@@ -88,4 +88,14 @@ ORDER
         ;
         /*380/16 = 23.75em */
     }
+
+    @if $breakpoint==phone-sm-land {
+        @media (max-height: 23.75em) {
+            @content
+        }
+
+        ;
+        /*380/16 = 23.75em */
+    }
+
 }

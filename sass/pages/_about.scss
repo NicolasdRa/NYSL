@@ -17,7 +17,7 @@
     }
 
     @include respond(phone-small) {
-        height: 120vh;
+        height: 125vh;
         width: 100vw;
     }
 
@@ -25,6 +25,7 @@
         height: 135vh;
         width: 100vw;
     }
+
 
     height: 70rem;
     border-radius: 3px;
@@ -45,6 +46,12 @@
 
         @include respond(phone) {
             margin-top: 4rem;
+        }
+
+        @include respond(phone-small) {
+            margin-top: 1rem;
+            width: 50%;
+            margin-left: 8rem;
         }
 
         @include respond(phone-land) {
@@ -140,6 +147,12 @@
             color: $color-primary;
 
             &--subtitle {
+                @include respond(phone-sm-land) {
+                    margin-top: 0;
+                    font-weight: 300;
+                    font-size: 2.5rem;
+                }
+
                 color: whitesmoke;
                 font-weight: 300;
                 font-size: 3rem;
@@ -159,6 +172,12 @@
                 @include respond(phone-land) {
                     font-weight: 200;
                     font-size: 1.8rem;
+                }
+
+                @include respond(phone-sm-land) {
+                    font-weight: 300;
+                    font-size: 1.5rem;
+                    color: $color-grey-mid;
                 }
 
                 font-weight: 200;

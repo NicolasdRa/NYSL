@@ -1,11 +1,13 @@
 /* SECTION EVENTS */
 
 .section-events {
+
     @include respond(tab-land) {
         height: 100vh;
         padding: 10rem 2rem 5rem 2rem;
         width: 100vw;
     }
+
 
     @include respond(tab-port) {
         height: 100vh;
@@ -19,10 +21,23 @@
         width: 100vw;
     }
 
+    @include respond(phone-small) {
+        height: 100vh;
+        padding: 9rem 2rem 15rem 2rem;
+        width: 100vw;
+    }
+
     @include respond(phone-land) {
         padding: 8rem 0 9rem 0;
         height: 110vh;
     }
+
+    @include respond(phone-sm-land) {
+        height: 105vh;
+        padding: 7rem 0 7rem 0;
+        width: 100vw;
+    }
+
 
     height: 70rem;
     padding: 9rem 0;
@@ -122,6 +137,13 @@
                     font-weight: 300;
                 }
 
+                @include respond(phone-sm-land) {
+                    margin-bottom: 0;
+                    font-size: 2rem;
+                    font-weight: 300;
+                }
+
+
                 display: flex;
                 justify-self: center;
                 align-self: center;
@@ -155,6 +177,11 @@
                     margin-left: 0;
                 }
 
+                @include respond(phone-sm-land) {
+                    margin-top: 0;
+                    margin-left: 0;
+                }
+
                 display: flex;
                 justify-content: center;
                 flex-wrap: wrap;
@@ -178,6 +205,11 @@
 
                     @include respond(phone-land) {
                         max-width: 40%;
+                        margin-top: .5rem;
+                    }
+
+                    @include respond(phone-land) {
+                        max-width: 38%;
                         margin-top: .5rem;
                     }
 
@@ -360,6 +392,12 @@
                     font-weight: 300;
                 }
 
+                @include respond(phone-sm-land) {
+                    margin-bottom: 0;
+                    font-size: 2rem;
+                    font-weight: 300;
+                }
+
                 display: flex;
                 justify-self: center;
                 align-self: center;
@@ -402,6 +440,14 @@
                     font-weight: 300;
                     font-size: 1.9rem;
                 }
+
+                @include respond(phone-land) {
+                    margin-top: 1rem;
+                    margin-left: 0;
+                    font-weight: 300;
+                    font-size: 1.5rem;
+                }
+
 
                 display: flex;
                 flex-direction: column;

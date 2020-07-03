@@ -26,6 +26,11 @@
         width: 100vw;
     }
 
+    @include respond(phone-sm-land) {
+        height: 240vh;
+        width: 100vw;
+    }
+
     height: 70rem;
     display: flex;
     flex-direction: column;
